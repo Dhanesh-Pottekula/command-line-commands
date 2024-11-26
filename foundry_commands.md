@@ -5,7 +5,7 @@ cast -> interact with deployed contracts
 anvil -> deploy a local blockchain
 forge fmt --> to format the solidity code
 
-forge create <contract > --rpc-url <url > --pricate-key <private key>
+forge create <contract > --rpc-url <url > --private-key <private key>
  
 forge script <contract path> --rpc-url <url> --account <key name> --sender <wallet address> --broadcast -vvvv {key name-> get when casted, wallet address -> public address in wallet, script --> runs the specified script }
 
@@ -29,3 +29,7 @@ forge test --fork-url <chain url >
 
 ### storage ###
 cast storage <contract address> <storage slot> { can access the storage};
+
+
+cast sig "<function name(types)>" {gives the selector}
+cast --calldata-decode "<function name(types)>" <call data of function> 
